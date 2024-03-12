@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 1</title>
+</head>
+<body>
+    <form>
+        <label>Enter Temp in C</label>
+        <input type="number" id="temp"/>
+        <button id="submit">Convert to F</button>
+    </form>
+</body>
+<script>
+
+    let celsiusToFahrenheit = () => {
+        let input = document.getElementById('temp').value
+        let result = (input * 1.8) + 32;
+        console.log(result)
+    };
+
+    document.getElementById('submit').addEventListener('click', (e) => 
+    {
+        e.preventDefault();
+        celsiusToFahrenheit();
+    });
+</script>
+</html>
